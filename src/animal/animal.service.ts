@@ -1,12 +1,13 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable, Inject, Scope } from '@nestjs/common';
+import { IAnimalStrategy } from './strategies/animalStrategy';
 
 @Injectable()
 export class AnimalService {
-    constructor (@Inject('STRATEGY') private strategy) {
-        this.strategy = strategy
-    }
+  constructor(private readonly strategy: IAnimalStrategy) {
+    this.strategy = strategy;
+  }
 
-    public makeSound() {
-        return this.strategy.makeSound()
-    }
+  public makeSound() {
+    return this.strategy.makeSound();
+  }
 }

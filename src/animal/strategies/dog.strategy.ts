@@ -1,7 +1,8 @@
-class DogStrategy {
-    public makeSound() {
-        return 'woof';
-    }
-}
+import { Injectable } from '@nestjs/common';
+import { IAnimalStrategy } from './animalStrategy';
 
-export const dogStrategy = new DogStrategy();
+export class DogStrategy implements IAnimalStrategy {
+  makeSound(): string {
+    return 'wow';
+  }
+}
