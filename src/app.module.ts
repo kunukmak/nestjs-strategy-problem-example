@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { CatModule } from './cat/cat.module';
 import { DogModule } from './dog/dog.module';
 
-
 @Module({
   imports: [CatModule, DogModule],
   controllers: [AppController],

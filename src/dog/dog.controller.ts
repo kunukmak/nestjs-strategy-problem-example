@@ -1,12 +1,12 @@
-import { Controller, Get } from '@nestjs/common'
-import { DogService } from './dog.service'
+import { Controller, Get } from '@nestjs/common';
+import { DogService } from './dog.service';
 
 @Controller('dog')
 export class DogController {
-    constructor(private readonly dogService: DogService) {}
+  constructor(private readonly dogService: DogService) {}
 
-    @Get()
-    getDogSound() {
-        return this.dogService.makeSound()
-    }
+  @Get()
+  getDogSound() {
+    return this.dogService.makeSound();
+  }
 }

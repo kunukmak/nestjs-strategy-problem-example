@@ -1,7 +1,7 @@
-class CatStrategy {
-    public makeSound() {
-        return 'meow';
-    }
-}
+import { IAnimalStrategy } from './animalStrategy';
 
-export const catStrategy = new CatStrategy();
+export class CatStrategy implements IAnimalStrategy {
+  public makeSound(): string {
+    return 'meow';
+  }
+}
